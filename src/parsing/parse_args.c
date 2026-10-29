@@ -1,0 +1,1 @@
+// flags, empty args, reading argv

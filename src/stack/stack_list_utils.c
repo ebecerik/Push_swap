@@ -1,0 +1,1 @@
+// free a stack, read position k

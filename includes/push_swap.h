@@ -1,0 +1,1 @@
+// structs, op codes, every shared function

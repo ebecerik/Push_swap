@@ -1,0 +1,1 @@
+// --simple: push the smallest to b each time, then push everything back

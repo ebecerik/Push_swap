@@ -1,0 +1,1 @@
+// linked list: new node, push/pop top and bottom

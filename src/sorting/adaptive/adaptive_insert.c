@@ -1,0 +1,1 @@
+// Low disorder: put each number back from b at its cheapest spot

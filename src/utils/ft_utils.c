@@ -1,0 +1,1 @@
+// strcmp, is_space, putstr, putnbr, bzero
