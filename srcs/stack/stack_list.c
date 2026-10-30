@@ -6,7 +6,7 @@
 /*   By: amazloum <amazloum@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/30 12:53:10 by amazloum      #+#    #+#                 */
-/*   Updated: 2026/10/30 13:16:09 by amazloum      ########   odam.nl         */
+/*   Updated: 2026/10/30 18:14:28 by amazloum      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	stack_push_top(t_stack *s, t_node *n)
 t_node	*stack_pop_top(t_stack *s)
 {
 	t_node	*n;
-	
+
 	n = s->top;
 	if (!n)
 		return (NULL);
