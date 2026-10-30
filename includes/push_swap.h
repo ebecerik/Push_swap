@@ -6,7 +6,7 @@
 /*   By: amazloum <amazloum@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/30 11:52:28 by amazloum      #+#    #+#                 */
-/*   Updated: 2026/10/30 11:58:52 by amazloum      ########   odam.nl         */
+/*   Updated: 2026/10/30 13:13:00 by amazloum      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,12 @@ typedef struct s_stack
 	t_node	*bot;
 	int		size;
 }	t_stack;
+
+t_node	*node_new(int val);
+void	stack_add_bottom(t_stack *s, t_node *n);
+void	stack_push_top(t_stack *s, t_node *n);
+t_node	*stack_pop_top(t_stack *s);
+t_node	*stack_pop_bottom(t_stack *s);
+
 
 #endif
