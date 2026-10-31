@@ -1,1 +1,6 @@
-// Low disorder: put each number back from b at its cheapest spot
+#include "push_swap.h"
+
+void	insert_back(t_ps *ps)
+{
+	(void)ps;
+}

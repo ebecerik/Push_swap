@@ -1,1 +1,6 @@
-// --medium: push to b in groups of √n, then pull back the biggest each time
+#include "push_swap.h"
+
+void	chunk_sort(t_ps *ps)
+{
+	(void)ps;
+}

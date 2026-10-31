@@ -1,1 +1,0 @@
-// 6 numbers or less: try every possible sequence of moves and keep the shortest

@@ -1,1 +1,6 @@
-// Low disorder: keep the numbers already in order, push the rest to b
+#include "push_swap.h"
+
+void	adaptive_low(t_ps *ps)
+{
+	(void)ps;
+}

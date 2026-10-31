@@ -1,1 +1,0 @@
-// BFS setup and the code of the “sorted” state

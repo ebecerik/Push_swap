@@ -8,6 +8,25 @@ SRC_DIR		= srcs
 OBJ_DIR		= obj
 
 SRCS		= main.c \
+			  utils/ft_utils.c \
+			  stack/stack_list.c \
+			  stack/stack_list_utils.c \
+			  stack/stack_find.c \
+			  parsing/parse_args.c \
+			  parsing/parse_numbers.c \
+			  operations/operations.c \
+			  operations/op_record.c \
+			  output/print_ops.c \
+			  output/print_bench.c \
+			  strategy/strategy.c \
+			  sorting/simple/simple_sort.c \
+			  sorting/medium/chunk_sort.c \
+			  sorting/complex/quick_sort.c \
+			  sorting/complex/quick_move.c \
+			  sorting/complex/quick_small.c \
+			  sorting/adaptive/adaptive_lis.c \
+			  sorting/adaptive/adaptive_insert.c \
+			  sorting/adaptive/adaptive_utils.c
 			  
 
 OBJS		= $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))

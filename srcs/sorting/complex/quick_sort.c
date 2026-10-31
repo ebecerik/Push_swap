@@ -1,1 +1,6 @@
-// --complex: split each group into 3 parts and sort each part the same way
+#include "push_swap.h"
+
+void	quick_sort(t_ps *ps)
+{
+	(void)ps;
+}

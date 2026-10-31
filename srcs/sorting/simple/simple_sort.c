@@ -1,1 +1,11 @@
-// --simple: push the smallest to b each time, then push everything back
+#include "push_swap.h"
+
+void	sort_three(t_ps *ps)
+{
+	(void)ps;
+}
+
+void	simple_sort(t_ps *ps)
+{
+	(void)ps;
+}

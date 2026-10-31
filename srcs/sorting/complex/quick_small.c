@@ -1,1 +1,7 @@
-// Quicksort’s last step: sort groups of 3 numbers or less
+#include "push_swap.h"
+
+void	sort_small_chunk(t_ps *ps, t_chunk *c)
+{
+	(void)ps;
+	(void)c;
+}
