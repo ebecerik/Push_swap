@@ -6,7 +6,7 @@
 /*   By: elifbece <elifbece@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/11/02 17:11:42 by elifbece      #+#    #+#                 */
-/*   Updated: 2026/11/02 17:27:46 by elifbece      ########   odam.nl         */
+/*   Updated: 2026/11/03 20:30:27 by elifbece      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,4 @@ void	read_numbers(t_ps *ps, char *s)
 			ps_exit(ps, 1);
 		stack_add_bottom(&ps->a, n);
 	}
-}
-
-void	index_ranks(t_ps *ps)
-{
-	(void)ps;
 }

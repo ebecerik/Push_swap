@@ -14,6 +14,7 @@ SRCS		= main.c \
 			  stack/stack_find.c \
 			  parsing/parse_args.c \
 			  parsing/parse_numbers.c \
+			  parsing/index_ranks.c \
 			  operations/operations.c \
 			  operations/op_record.c \
 			  output/print_ops.c \

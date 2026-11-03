@@ -6,7 +6,7 @@
 /*   By: elifbece <elifbece@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/11/02 17:39:16 by elifbece      #+#    #+#                 */
-/*   Updated: 2026/11/02 17:40:05 by elifbece      ########   odam.nl         */
+/*   Updated: 2026/11/03 20:30:47 by elifbece      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	*collect_vals(t_ps *ps)
 	return (vals);
 }
 
-static void	check_duplicates(t_ps *ps, int *vals)
+static int	has_duplicates(t_ps *ps, int *vals)
 {
 	int	i;
 	int	j;
@@ -42,11 +42,9 @@ static void	check_duplicates(t_ps *ps, int *vals)
 		j = i;
 		while (++j < ps->a.size)
 			if (vals[i] == vals[j])
-			{
-				free(vals);
-				ps_exit(ps, 1);
-			}
+				return (1);
 	}
+	return (0);
 }
 
 static int	rank_of(int *vals, int n, int i)
@@ -71,7 +69,11 @@ void	index_ranks(t_ps *ps)
 	if (ps->a.size < 2)
 		return ;
 	vals = collect_vals(ps);
-	check_duplicates(ps, vals);
+	if (has_duplicates(ps, vals))
+	{
+		free(vals);
+		ps_exit(ps, 1);
+	}
 	n = ps->a.top;
 	i = 0;
 	while (n)
