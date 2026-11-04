@@ -6,7 +6,7 @@
 /*   By: amazloum <amazloum@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/11/01 16:13:20 by amazloum      #+#    #+#                 */
-/*   Updated: 2026/11/01 16:25:21 by amazloum      ########   odam.nl         */
+/*   Updated: 2026/11/04 10:53:34 by amazloum      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	push_chunks(t_ps *ps, int range)
 				op(ps, RB);
 			i++;
 		}
-		else if (ps->a.top->val <= 1 + range)
+		else if (ps->a.top->val <= i + range)
 		{
 			op(ps, PB);
 			i++;
