@@ -6,7 +6,7 @@
 /*   By: elifbece <elifbece@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/11/10 13:14:57 by elifbece      #+#    #+#                 */
-/*   Updated: 2026/11/11 13:22:45 by elifbece      ########   odam.nl         */
+/*   Updated: 2026/11/11 13:46:15 by elifbece      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,20 @@ static void	put_strategy(t_ps *ps)
 	ft_putstr_fd("\n", 2);
 }
 
+static void	put_line(char **labels, int *counts, int from, int to)
+{
+	ft_putstr_fd("[bench] ", 2);
+	while (from < to)
+	{
+		ft_putstr_fd(labels[from], 2);
+		ft_putnbr_fd(counts[from], 2);
+		if (from < to - 1)
+			ft_putstr_fd(" ", 2);
+		from++;
+	}
+	ft_putstr_fd("\n", 2);
+}
+
 static void	put_counts(t_ps *ps)
 {
 	static char	*labels[11] = {"sa: ", "sb: ", "ss: ", "pa: ", "pb: ",
@@ -51,16 +65,8 @@ static void	put_counts(t_ps *ps)
 	i = -1;
 	while (++i < ps->nops)
 		counts[ps->ops[i]]++;
-	ft_putstr_fd("[bench] ", 2);
-	i = -1;
-	while (++i < 11)
-	{
-		ft_putstr_fd(labels[i], 2);
-		ft_putnbr_fd(counts[i], 2);
-		if (i < 10)
-			ft_putstr_fd(" ", 2);
-	}
-	ft_putstr_fd("\n", 2);
+	put_line(labels, counts, 0, 5);
+	put_line(labels, counts, 5, 11);
 }
 
 void	print_bench(t_ps *ps)
