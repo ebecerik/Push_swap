@@ -6,7 +6,7 @@
 /*   By: amazloum <amazloum@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/11/01 14:47:08 by amazloum      #+#    #+#                 */
-/*   Updated: 2026/11/05 11:29:48 by amazloum      ########   odam.nl         */
+/*   Updated: 2026/11/13 18:15:41 by elifbece      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,9 @@ void	run_strategy(t_ps *ps)
 	set_regime(ps);
 	if (is_sorted(&ps->a))
 		return ;
-	if (ps->a.size <= 6 || ps->regime == R_N2)
+	if (ps->strat == ADAPTIVE && ps->a.size <= 6)
+		ps->regime = R_N2;
+	if (ps->regime == R_N2)
 		simple_sort(ps);
 	else if (ps->regime == R_N)
 		adaptive_low(ps);
