@@ -169,4 +169,4 @@ srcs/sorting/adaptive/adaptive_*.c    adaptive low disorder method
 We used AI as a learning aid: to get explanations of concepts and algorithms, to compare approaches, and to help debug. We wrote every file ourselves, traced each function by hand on small examples, tested each file with our own test programs, and verified the final program with the checker, benchmarks, valgrind and norminette.
  
 - **amazloum:** asked for explanations of algorithms and functions before writing them, and help reading compile errors.
-- **elifbece:** [your own words]
+- **elifbece:** used AI as a learning tool to better understand C concepts, data structures, and algorithms, discuss implementation approaches and edge cases, and troubleshoot issues during development. I also used it to understand testing methods and Git commands, review my reasoning, and improve project documentation.
