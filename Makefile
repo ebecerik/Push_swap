@@ -32,7 +32,26 @@ SRCS		= main.c \
 
 OBJS		= $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
+CHECKER		= checker
+
+BONUS_SRCS	= bonus/checker_bonus.c \
+			  bonus/checker_exit_bonus.c \
+			  utils/ft_utils.c \
+			  stack/stack_list.c \
+			  stack/stack_list_utils.c \
+			  parsing/parse_args.c \
+			  parsing/parse_numbers.c \
+			  parsing/index_ranks.c \
+			  operations/operations.c
+
+BONUS_OBJS	= $(addprefix $(OBJ_DIR)/, $(BONUS_SRCS:.c=.o))
+
 all: $(NAME)
+
+bonus: $(CHECKER)
+
+$(CHECKER): $(BONUS_OBJS)
+	$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(CHECKER)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
@@ -45,8 +64,8 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(CHECKER)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
